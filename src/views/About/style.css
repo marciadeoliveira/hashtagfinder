@@ -1,0 +1,136 @@
+.containerAbout{
+  max-width: 1920px;
+  display: flex;
+  flex-direction: column;
+  background-image: url('../../assets/table-bg.jpg');
+  color:  #FFFFFF;
+}
+.about{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 2%;
+  align-items: center;
+  padding-bottom: 3%;
+}
+.aboutProject{
+  width: 50%;
+  line-height: 200%;
+}
+.aboutProjectTitle{
+  font-size: 1.1rem;
+}
+.projectText{
+  text-align: justify;
+  margin-top: 10%;
+  font-size: 1rem;
+}
+.aboutIlustration{
+  width: 40%;
+  display: flex;
+  align-items: center;
+  padding-top: 3%;
+}
+.IlustrationImage{
+  width: 100%;
+}
+.aboutUs{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3%;
+}
+.aboutTitle{
+  width: 87%;
+  margin-bottom: 2%;
+}
+.aboutUsBox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin-top: 2%;
+}
+@media screen and (max-width:1112px) {
+  .containerAbout{
+    max-width: 1112px;
+  }
+  .about{
+    margin-top: 5%;
+  }
+}
+@media screen and (max-width:768px) {
+  .containerAbout{
+    max-width: 768px;
+  }
+  .about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .aboutProject{
+    align-items: center;
+  
+    width: 100%;
+  }
+  .aboutIlustration{
+    margin-top: 10%;
+    width: 90%;
+  }
+  .aboutUsBox{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3%;
+  }
+} 
+@media screen and (max-width:562px) {
+  .containerAbout{
+    max-width: 562px;
+  }
+  .about{
+   width: 90%;
+  }
+  .aboutProject{
+    width: 100%;
+  }
+  .aboutTitle{
+   margin-top: 10%;
+   margin-bottom: 5%;
+  }
+  .aboutUsBox{
+    display: flex;
+    width: 60%;
+    height: 100%;
+    flex-direction: column;
+    margin-top: 5%;
+  }
+}
+@media screen and (max-width:412px) {
+  .containerAbout{
+    max-width: 412px;
+  }
+  .about{
+   width: 90%;
+  }
+  .aboutProject{
+    width: 100%;
+    margin-bottom: 3%;
+  }
+  .aboutUs{
+    margin-top: 10%;
+  }
+  .aboutTitle{
+   margin-top: 20%;
+   margin-bottom: 10%;
+   text-align: center;
+   font-size: .9rem;
+  }
+  .aboutUsBox{
+    display: flex;
+    width: 70%;
+    height: 100%;
+    flex-direction: column;
+  }
+}
