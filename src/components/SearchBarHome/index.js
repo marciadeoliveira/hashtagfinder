@@ -1,9 +1,10 @@
-import IconSearch from '../../assets/icon-search.svg';
 import React from "react";
-
+import IconSearch from '../../assets/icon-search.svg';
 import "./style.css";
+
 function SearchBarHome(props){
   var tag;
+  // Função que verifica se input tem algum valor ao teclar enter, através do input
   function handleChange(e){
     tag = document.querySelector('#searchInput').value.replace(/[^a-zA-Z0-9_]/g, '')
     var keyEnter= e.keyCode
@@ -17,6 +18,7 @@ function SearchBarHome(props){
       }
     }
   }
+  // Função que verifica se input tem algum valor ao clicar na lupa de pesquisa
   function addHash(){
     tag = document.querySelector('#searchInput').value.replace(/[^a-zA-Z0-9_]/g, '')
     if(tag === ''){
@@ -27,10 +29,12 @@ function SearchBarHome(props){
       twitter()
     }
   }
+  // Funçaõ que limpa o valor do input e também a mensagem de erro pelo input não ter valor
   function clearFields(){
     document.querySelector('#searchInput').value = ''
     props.setMsgErr('')
   }
+
   function twitter(){
     console.log( 'agora vai')
   } 

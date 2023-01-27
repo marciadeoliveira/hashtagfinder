@@ -3,7 +3,8 @@
   display: flex;
   justify-content: center;
   align-content: center;
-  margin-top: 12%;
+  margin-top: 11%;
+  margin-bottom: 2%;
 }
   
 .searchBarInput{
@@ -22,11 +23,13 @@
     color: #8D9DA2;
     opacity: 0.57;
     font-size: 30px;
+    margin-left: 3%;
   } 
   .searchButton{
     background-color: transparent;
     border: none;
     cursor: pointer;
+    margin-left: 3%;
   }
   .searchInputIcon{
     margin-left: 2%;
