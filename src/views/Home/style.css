@@ -1,13 +1,27 @@
-.container {
-    top: 355px;
-    left: 0px;
-    width: 1920px;
-    height: 697px;
+.containerHome{
+    max-width: 1920px;
+    display: flex;
+    flex-direction: column;
+  }
+  .home{
     background-image: url('../../assets/hero-bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    opacity: 1;
-}
+    height: 600px;
+    color: white;
+  }
+  .homeTitle{
+    margin-top: 13%;
+    font-size: 28px;
+    margin-left: 5%;
+  }
+  .homeSubtitle{
+    font-size: 20px;
+    margin-left: 5%;
+    margin-top: 2%;
+  }
+
+/*
 
 .boxTextTitle {
     top: 250px;
@@ -38,3 +52,4 @@
     padding-left: 80px;
     opacity: 1;
 }
+*/
