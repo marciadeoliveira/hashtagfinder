@@ -125,7 +125,25 @@ function Home() {
       twitter:'https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoicHQifQ%3D%3D%22%7D',
     },
   ]
-  
+  function getTwitter(){
+    if(searchValue !== ''){
+      console.log(searchValue, 'searchValue')
+      fetch(`https://cors.eu.org/https://api.twitter.com/2/tweets/search/recent?query=${searchValue}%20has:hashtags%20-is:retweet%20-is:quote%20has:images&max_results=10&expansions=author_id,attachments.media_keys&user.fields=id,name,username,profile_image_url,url&media.fields=type,url,width,height&tweet.fields=source`,
+        {                                                               
+          method:"GET",
+          headers:{
+            "Authorization": 'Bearer AAAAAAAAAAAAAAAAAAAAAFlKHgEAAAAApBW4nRyRkiogluzAbXlS4KuHlMU%3DFcR7r8N19LRnMHLVmYlFsod6Be6zUvZD2rxATotl6mLPAh2UEX'
+          }
+        }
+      )
+      .then(function(res){ return res.json()})
+      .then(function(result){
+        console.log(result)
+      })
+    }
+
+  }
+  getTwitter()
   return (
     <div className="containerHome">
       <Header buttons={buttonStyles} />
