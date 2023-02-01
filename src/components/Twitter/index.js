@@ -11,7 +11,7 @@ function Twitter(props){
       </div>
       <div className="containerInformation">
         {
-          props.userTwitter.map((item,index) => <div className="twitterUser">
+          props.userTwitter.map((item,index) => <div className="twitterUser" key={index}>
           <div className="twitterProfile">
             <img src= {item.profile} alt= "foto do perfil" className="twitterPicture"/>
           </div>

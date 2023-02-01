@@ -5,8 +5,7 @@ import Header from "../../components/Header";
 import SearchBarHome from "../../components/SearchBarHome";
 import Twitter from '../../components/Twitter'
 import Footer from "../../components/Footer";
-import IconTeste from '../../assets/imgcardTEST.jpg'
-import Perfil from '../../assets/marcia.jpeg';
+//import Perfil from '../../assets/marcia.jpeg';
 import "./style.css";
 
 
@@ -29,105 +28,15 @@ function Home() {
       backgroundColor: "#1E3E7B",
     },
   ]
-  const cardsTwitter =[
-    {
-      icon: IconTeste,
-    },
-    {
-      icon: IconTeste ,
-    },
-    {
-      icon: IconTeste,
-    },
-    {
-      icon: IconTeste,
-    },
-    {
-      icon: IconTeste,
-    },
-    {
-      icon: IconTeste,
-    },
-    {
-      icon: IconTeste,
-    },
-    {
-      icon: IconTeste,
-    },
-    {
-      icon: IconTeste,
-    },
-    {
-      icon: IconTeste,
-    },
-  ]
-  const userTwitter=[
-    {
-      profile : Perfil,
-      userName: 'Username',
-      user: '@blablabla',
-      text:'Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum',
-      twitter:'https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoicHQifQ%3D%3D%22%7D',
-    },
-    {
-      profile : Perfil,
-      userName: 'Username',
-      user: '@blablabla',
-      text:'Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum',
-      twitter:'https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoicHQifQ%3D%3D%22%7D',
-    }, {
-      profile : Perfil,
-      userName: 'Username',
-      user: '@blablabla',
-      text:'Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum',
-      twitter:'https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoicHQifQ%3D%3D%22%7D',
-    }, {
-      profile : Perfil,
-      userName: 'Username',
-      user: '@blablabla',
-      text:'Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum',
-      twitter:'https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoicHQifQ%3D%3D%22%7D',
-    }, {
-      profile : Perfil,
-      userName: 'Username',
-      user: '@blablabla',
-      text:'Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum',
-      twitter:'https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoicHQifQ%3D%3D%22%7D',
-    }, {
-      profile : Perfil,
-      userName: 'Username',
-      user: '@blablabla',
-      text:'Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum',
-      twitter:'https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoicHQifQ%3D%3D%22%7D',
-    }, {
-      profile : Perfil,
-      userName: 'Username',
-      user: '@blablabla',
-      text:'Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum',
-      twitter:'https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoicHQifQ%3D%3D%22%7D',
-    }, {
-      profile : Perfil,
-      userName: 'Username',
-      user: '@blablabla',
-      text:'Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum',
-      twitter:'https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoicHQifQ%3D%3D%22%7D',
-    }, {
-      profile : Perfil,
-      userName: 'Username',
-      user: '@blablabla',
-      text:'Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum',
-      twitter:'https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoicHQifQ%3D%3D%22%7D',
-    }, {
-      profile : Perfil,
-      userName: 'Username',
-      user: '@blablabla',
-      text:'Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum',
-      twitter:'https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoicHQifQ%3D%3D%22%7D',
-    },
-  ]
+  const [cardsTwitter, setCardsTwitter] =useState([])
+  const [userTwitter, setUserTwitter]=useState([])
+  let imageTwitter=[]
+  let user = []
+  let text=[]
+  
   function getTwitter(){
+    //Se tiver valor no input, fazer o fetch na apiTwitter
     if(searchValue !== ''){
-      console.log(searchValue, 'searchValue')
       fetch(`https://cors.eu.org/https://api.twitter.com/2/tweets/search/recent?query=${searchValue}%20has:hashtags%20-is:retweet%20-is:quote%20has:images&max_results=10&expansions=author_id,attachments.media_keys&user.fields=id,name,username,profile_image_url,url&media.fields=type,url,width,height&tweet.fields=source`,
         {                                                               
           method:"GET",
@@ -138,10 +47,57 @@ function Home() {
       )
       .then(function(res){ return res.json()})
       .then(function(result){
-        console.log(result)
+        const dataBase = {
+          data:[result.data], //text 
+          includes: [result.includes],// media tem url e foto do post - e users tem name, username, profile_image_url
+          meta: [result.meta],
+        }
+       //LIMITAR O VALOR DE POSTS E CARDS TRAZIDOS ... CARSDTWITTER,LENGTH
+       //LIMITAR O TAMANHO DO TEXTO NO USERTWITTER
+       
+        //enquanto o array cardsTwitter >= 10 .....pegar o endereço das imagens dos posts e adicionar na props.cardstwitter
+        const urlImage = [dataBase.includes[0].media]
+        urlImage.map(item => {
+          item.map(i => 
+            imageTwitter.push(
+              { 
+                icon: i.url
+              }
+            )
+          )
+            return setCardsTwitter(imageTwitter)
+        })
+        
+        //Pegar os valores dos usuarios, como nome, foto de perfil e adicionar na props. userCards.....
+        const dataUsers = [dataBase.includes[0].users]
+        dataUsers.map(item=>{
+          item.map(i =>
+            user.push(
+              {
+                profile :i.profile_image_url,
+                userName:i.username,
+                user: i.name,
+                twitter: i.url,
+              }
+            )
+          )
+          return setUserTwitter(user)
+        })
+      // pegar o valor dos textos postados e adicionar na props. userCards 
+        const dataText = [dataBase.data[0]]
+        dataText.map(item=>{
+          item.map(i => 
+            text.push(
+              {
+                text: i.text
+              }
+            )
+          )
+          return setUserTwitter(text)
+        })
       })
-    }
 
+    }
   }
   getTwitter()
   return (
