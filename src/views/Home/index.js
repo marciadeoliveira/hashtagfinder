@@ -73,6 +73,7 @@ function Home() {
         setUserTwitter(users)
         setCardsTwitter(images)
         setUserText(texts)
+        return dataBase;
         })
       })
     }
