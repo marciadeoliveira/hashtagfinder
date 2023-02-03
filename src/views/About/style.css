@@ -16,21 +16,23 @@
 }
 .aboutProject{
   width: 50%;
-  line-height: 200%;
+  margin-top: 5%;
+  padding-left: 3%;
 }
 .aboutProjectTitle{
-  font-size: 1.1rem;
+  font-size: 2.5rem;
+  padding-bottom: 10%;
 }
 .projectText{
   text-align: justify;
-  margin-top: 10%;
-  font-size: 1rem;
+  font-size: 1.8rem;
+  line-height: 3rem;
 }
 .aboutIlustration{
   width: 40%;
   display: flex;
   align-items: center;
-  padding-top: 3%;
+  padding-top: 8%;
 }
 .IlustrationImage{
   width: 100%;
@@ -44,36 +46,99 @@
 }
 .aboutTitle{
   width: 87%;
-  margin-bottom: 2%;
+  margin-bottom: 4%;
+  margin-top: 2%;
+  font-size: 1.7rem;
+  padding-left: 10%;
 }
 .aboutUsBox{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 90%;
+  width: 80%;
   margin-top: 2%;
+  margin-bottom: 8%;
+}
+@media screen and (max-width:1500px){
+  .containerAbout{
+    max-width: 1500px;
+  }
+  .aboutProject{
+    margin-top: 0%;
+  }
+  .aboutProjectTitle{
+    font-size: 1.5rem;
+  }
+  .aboutIlustration{
+    padding-top: 10%;
+  }
+  .projectText{
+    font-size: 1.1rem;
+    line-height: 2.2rem;
+  }
+  .aboutTitle{
+    margin-bottom: 3%;
+    margin-top: 1%;
+    font-size: 1.2rem;
+  }
 }
 @media screen and (max-width:1112px) {
   .containerAbout{
     max-width: 1112px;
   }
   .about{
-    margin-top: 5%;
+    margin-top: 2%;
+  }
+  .aboutIlustration{
+    padding-top: 3%;
+  }
+  .aboutProjectTitle{
+    font-size: 1.3rem;
+    margin-top: 4%;
+    margin-bottom: 0%;
+  }
+  .projectText{
+    font-size: .9rem;
+    line-height: 2rem;
+  }
+  .aboutTitle{
+    margin-bottom: 3%;
+    margin-top: 1%;
+    font-size: 1rem;
+    padding-left: 6%;
+  }
+  .aboutUsBox{
+    width: 85%;
   }
 }
 @media screen and (max-width:768px) {
   .containerAbout{
     max-width: 768px;
+    align-items: center;
   }
   .about{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 85%;
   }
   .aboutProject{
+    padding-left: 0%;
     align-items: center;
-  
     width: 100%;
+  }
+  .aboutProjectTitle{
+    margin-top: 6%;
+    margin-bottom: 0%;
+  }
+  .projectText{
+    font-size: 1.1rem;
+    line-height: 2.2;
+    margin-bottom: 5%;
+  }
+  .aboutTitle{
+    margin-bottom: 6%;
+    margin-top: 8%;
   }
   .aboutIlustration{
     margin-top: 10%;
@@ -84,53 +149,51 @@
     flex-direction: column;
     margin-top: 3%;
   }
-} 
+}
+
 @media screen and (max-width:562px) {
   .containerAbout{
     max-width: 562px;
   }
   .about{
-   width: 90%;
+   width: 80%;
   }
   .aboutProject{
     width: 100%;
   }
-  .aboutTitle{
-   margin-top: 10%;
-   margin-bottom: 5%;
+  .aboutProjectTitle{
+    margin-top: 8%;
   }
-  .aboutUsBox{
-    display: flex;
-    width: 60%;
-    height: 100%;
-    flex-direction: column;
-    margin-top: 5%;
+  .projectText{
+    margin-bottom: 8%;
+  }
+  .aboutIlustration{
+    width: 100%;
+  }
+  .aboutTitle{
+   margin-bottom: 5%;
   }
 }
 @media screen and (max-width:412px) {
   .containerAbout{
     max-width: 412px;
   }
-  .about{
-   width: 90%;
+  .aboutProjectTitle{
+    font-size: 1rem;
+    margin-top: 12%;
   }
-  .aboutProject{
-    width: 100%;
-    margin-bottom: 3%;
+  .projectText{
+    font-size: 1rem;
+    line-height: 2.1;
+  }
+  .aboutIlustration{
+    margin-top: 15%;
   }
   .aboutUs{
-    margin-top: 10%;
+    margin-top: 12%;
   }
   .aboutTitle{
-   margin-top: 20%;
-   margin-bottom: 10%;
-   text-align: center;
-   font-size: .9rem;
-  }
-  .aboutUsBox{
-    display: flex;
-    width: 70%;
-    height: 100%;
-    flex-direction: column;
+    margin-bottom: 8%;
+    font-size: .9rem;
   }
 }
