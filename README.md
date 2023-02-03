@@ -13,9 +13,13 @@ Para iniciar o projeto em React você precisa rodar no terminal
 Para instalar o React Router, rode o comando abaixo
 #### `npm install react-router-dom@6`
 
-### Equipe
+### Equipe(Squad)
 Nossa squad, é composta por très alunos da imersão e para que o projeto fosse concluído, nos dedicamos dias ee dias, em chamadas de vídeo, reuniões e muito boa vontade, além da troca de experiência de cada um.
 Recebemos as sprints, cada um ficou responsável por uma task.
 Prazos à serem cumpridos, desafios novos, trabalho em equipe e um projeto concluído com sucesso!
-
-
+<div style="display:flex">
+ <img src='https://user-images.githubusercontent.com/66282316/216690445-2bdfd006-bb5d-4525-9772-5396a962bea7.jpeg' style="width:100px">
+ <img src='https://user-images.githubusercontent.com/66282316/216689912-87935f31-a578-4d46-98bb-ec9153f94064.jpeg' style="width:100px;">
+ <img src='https://user-images.githubusercontent.com/66282316/216689877-f2fdb0c9-49ac-4025-80df-972d2fcc2440.jpeg' style="width:100px;">
+</div>
+ 
