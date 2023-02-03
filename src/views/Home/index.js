@@ -5,7 +5,6 @@ import Header from "../../components/Header";
 import SearchBarHome from "../../components/SearchBarHome";
 import Twitter from '../../components/Twitter'
 import Footer from "../../components/Footer";
-//import Perfil from '../../assets/marcia.jpeg';
 import "./style.css";
 
 
@@ -30,9 +29,10 @@ function Home() {
   ]
   const [cardsTwitter, setCardsTwitter] =useState([])
   const [userTwitter, setUserTwitter]=useState([])
-  let imageTwitter=[]
-  let user = []
-  let text=[]
+  const [userText, setUserText] =useState([])
+  let images=[]
+  let users = []
+  let texts=[]
   
   function getTwitter(){
     //Se tiver valor no input, fazer o fetch na apiTwitter
@@ -47,59 +47,38 @@ function Home() {
       )
       .then(function(res){ return res.json()})
       .then(function(result){
-        const dataBase = {
-          data:[result.data], //text 
-          includes: [result.includes],// media tem url e foto do post - e users tem name, username, profile_image_url
-          meta: [result.meta],
-        }
-       //LIMITAR O VALOR DE POSTS E CARDS TRAZIDOS ... CARSDTWITTER,LENGTH
-       //LIMITAR O TAMANHO DO TEXTO NO USERTWITTER
-       
-        //enquanto o array cardsTwitter >= 10 .....pegar o endereço das imagens dos posts e adicionar na props.cardstwitter
-        const urlImage = [dataBase.includes[0].media]
-        urlImage.map(item => {
-          item.map(i => 
-            imageTwitter.push(
-              { 
-                icon: i.url
-              }
-            )
+        const dataBase= [result]
+
+        dataBase.map(item=>{
+          const dataText = item.data
+          const dataMedia = item.includes.media
+          const dataIncludes =item.includes.users
+          dataText.map(item=>
+            texts.push({text:item.text})
           )
-            return setCardsTwitter(imageTwitter)
-        })
-        
-        //Pegar os valores dos usuarios, como nome, foto de perfil e adicionar na props. userCards.....
-        const dataUsers = [dataBase.includes[0].users]
-        dataUsers.map(item=>{
-          item.map(i =>
-            user.push(
+          dataMedia.map(item=>
+            images.push({icon:item.url})
+          )
+          dataIncludes.map(item=>
+            users.push(
               {
-                profile :i.profile_image_url,
-                userName:i.username,
-                user: i.name,
-                twitter: i.url,
+                profile :item.profile_image_url,
+                user: item.name,
+                userName: item.username,
+                twitter: item.url,
+                id: item.id,
               }
             )
-          )
-          return setUserTwitter(user)
-        })
-      // pegar o valor dos textos postados e adicionar na props. userCards 
-        const dataText = [dataBase.data[0]]
-        dataText.map(item=>{
-          item.map(i => 
-            text.push(
-              {
-                text: i.text
-              }
-            )
-          )
-          return setUserTwitter(text)
+          )   
+        setUserTwitter(users)
+        setCardsTwitter(images)
+        setUserText(texts)
         })
       })
-
     }
   }
   getTwitter()
+  
   return (
     <div className="containerHome">
       <Header buttons={buttonStyles} />
@@ -124,7 +103,7 @@ function Home() {
         <div>Exibindo os 10 resultados mais recentes para #{searchValue}</div>
       </div>
       <div>
-        <Twitter cardsTwitter={cardsTwitter} userTwitter={userTwitter}/>
+        <Twitter cardsTwitter={cardsTwitter} userTwitter={userTwitter} userText={userText}/>
       </div>
       <Footer />
     </div>

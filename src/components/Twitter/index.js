@@ -16,8 +16,10 @@ function Twitter(props){
             <img src= {item.profile} alt= "foto do perfil" className="twitterPicture"/>
           </div>
           <div className="twitterInformations">
-            <div className="informationsUser">{item.userName}: {item.user}</div>
-            <div className="informationsText">{item.text}</div>
+            <div className="informationsUser">{item.userName}: @{item.user}</div>
+            {
+              props.userText.map((item, index)=><div className="informationsText">{item.text}</div>)
+            }
             <div className="informationsBoxLink">
               <a href={item.twitter}
                  className="informationsLink" 

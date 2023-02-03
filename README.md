@@ -9,3 +9,7 @@ Para iniciar o projeto em React você precisa rodar no terminal
 ### Instale o React Router
 Para instalar o React Router, rode o comando abaixo
 #### `npm install react-router-dom@6`
+
+### Instale o dotenv 
+Para instalar o dotenv, rode o comando 
+#### `npm install dotenv`
