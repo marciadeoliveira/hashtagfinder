@@ -9,15 +9,7 @@
     background-repeat: no-repeat;
     height: 600px;
     color: white;
-  }
-  .homeMessage{
-    background-color:  #0A1744;
-    color: white;
-    width: 100%;
-    text-align: center;
-    padding-top: 7%;
-    padding-bottom: 5%;
-    font-size: 25px
+    padding-bottom: 3%;
   }
   .homeTitle{
     margin-top: 13%;
@@ -29,4 +21,12 @@
     margin-left: 5%;
     margin-top: 2%;
   }
-
+  .homeMessage{
+    background-color:  #0e1c52;
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding-top: 3%;
+    padding-bottom: 5%;
+    font-size: 25px
+  }

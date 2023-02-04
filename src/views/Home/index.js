@@ -99,10 +99,12 @@ function Home() {
           setMsgErr={setMsgErr}
         />
       </div>
-      <div className="homeMessage">
-        <div>{msgErr}</div>
-        <div>Exibindo os 10 resultados mais recentes para #{searchValue}</div>
-      </div>
+      {
+        searchValue ? <div className="homeMessage">
+          <div>Exibindo os 10 resultados mais recentes para #{searchValue}</div>
+          <div>{msgErr}</div>
+        </div>:''
+      }
       <div>
         <Twitter cardsTwitter={cardsTwitter} userTwitter={userTwitter} userText={userText}/>
       </div>
