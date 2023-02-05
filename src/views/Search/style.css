@@ -8,7 +8,7 @@
 }
 
 /* Layout Properties */
-.ListMain {
+.SearchListMain{
     margin-left: 0px;
     margin-top: 0px;
     width: 100%;
@@ -18,29 +18,23 @@
     background-repeat: no-repeat;
 }
 
-.pageSearch {
+.Searchpage {
     background-image: url(../../assets/about-hero-bg.jpg);
     background-repeat: no-repeat;
     height: auto;
     width: auto;
 }
 
-.scrollTabela {
+.SearchscrollTable {
     max-width: 100%;
     overflow: auto;
     width: 100%;
     height: 400px;
     border-radius: 14px;
-
-    /*  display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px; */
 }
 
 /* BOX DA LISTA DE BUSCA */
-.ListTable {
+.SearchListTable {
     display: flex;
     margin-left: 15%;
     margin-right: 15%;
@@ -56,7 +50,7 @@
 }
 
 /* Titulo busca realizadas */
-.ListTitle {
+.SearchListTitle {
     color: #72efdb;
     font-size: 30px;
     font-family: "Rubik";
@@ -67,7 +61,7 @@
 }
 
 /*BOX DA #/DATE/HOUR*/
-.HeaderTable {
+.SearchHeaderTable {
     display: flex;
     background: #000f63;
     border-radius: 14px;
@@ -90,7 +84,7 @@ ul {
     list-style: none;
 }
 
-.ListHastags {
+.SearchListHastags {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
@@ -108,25 +102,25 @@ ul {
     padding: 20px 34.1px;
 }
 
-.hashTagColumn {
+.SearchhashTagColumn {
     padding-top: 10px;
     margin-left: 20px;
 }
 
-.dateColumn {
+.SearchdateColumn {
     padding-left: calc(30% - 34.1px);
     display: grid;
     justify-items: flex-end;
     color: #72efdb;
 }
 
-.hourColumn {
+.SearchhourColumn {
     padding-right: 45px;
 
 }
 
-.dateColumns,
-.hourColumns {
+.SearchdateColumns,
+.SearchhourColumns {
     display: grid;
     justify-items: flex-end;
     color: #72efdb;
@@ -135,19 +129,19 @@ ul {
 /* Para modelos tablets */
 
 @media screen and (max-width: 900px) {
-    .ListTitle {
+    .SearchListTitle {
         margin-left: 20%;
     }
 
-    .ListTable {
+    .SearchListTable {
 
         margin-left: 10px;
         margin-right: 10px;
 
     }
 
-    .dateColumns,
-    .hourColumns {
+    .SearchdateColumns,
+    .SearchhourColumns {
         display: grid;
         justify-items: flex-end;
         color: #72efdb;
@@ -156,23 +150,23 @@ ul {
 
 @media screen and (max-width: 840px) {
 
-    .hourColumns {
+    .SearchhourColumns {
         margin-right: 20px;
         color: #72efdb;
         padding-left: 25px;
 
     }
 
-    .HeaderTable {
+    .SearchHeaderTable {
         padding: 0;
     }
 
-    .hashTagColumn {
+    .SearchhashTagColumn {
         padding-top: 10px;
         margin-left: 50px;
     }
 
-    .hourColumn {
+    .SearchhourColumn {
         display: flex;
         margin-left: 35px;
         padding-right: 90px;
@@ -183,48 +177,45 @@ ul {
 
 /* Para modelos mobile */
 
-
-
 @media screen and (max-width: 395px) {
-    .ListTitle {
+    .SearchListTitle {
         margin-left: 15%;
     }
 
-    .hourColumns {
+    .SearchhourColumns {
         margin-right: 0px;
         color: #72efdb;
         padding-left: 20px;
-
     }
 
-    .HeaderTable {
+    .SearchHeaderTable {
         padding: 0;
     }
 
-    .hashTagColumn {
+    .SearchhashTagColumn {
         padding-top: 0px;
         margin-left: 20px;
         margin-right: 10px;
     }
 
-    .hourColumn {
+    .SearchhourColumn {
         padding-right: 50px;
     }
 
-    .ListHastags {
+    .SearchListHastags {
         padding-top: 10px;
         margin-left: 0px;
         padding-right: 0px;
     }
 
-    .hourColumns {
+    .SearchhourColumns {
         display: flex;
         margin-left: 10px;
         padding-right: 0px;
 
     }
 
-    .dateColumns {
+    .SearchdateColumns {
         display: flex;
         margin-left: 40px;
         padding-right: 0px;
