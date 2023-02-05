@@ -22,4 +22,3 @@ Prazos à serem cumpridos, desafios novos, trabalho em equipe e um projeto concl
  <img src='https://user-images.githubusercontent.com/66282316/216689912-87935f31-a578-4d46-98bb-ec9153f94064.jpeg' style="width:100px;">
  <img src='https://user-images.githubusercontent.com/66282316/216689877-f2fdb0c9-49ac-4025-80df-972d2fcc2440.jpeg' style="width:100px;">
 </div>
- 
