@@ -30,6 +30,7 @@ function Search() {
     fetch("https://api.airtable.com/v0/app6wQWfM6eJngkD4/buscas?maxRecords=10&filterByFormula=({Squad} = '09-22')",
     // fetch( "https://api.airtable.com/v0/app6wQWfM6eJngkD4/Buscas?maxRecords=10&view=Grid%20view",
 		  {
+        
         method:"GET",
         headers: 
 				{
