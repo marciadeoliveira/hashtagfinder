@@ -26,11 +26,14 @@ function Search() {
     },
   ]
   useEffect(() => {
-    fetch("https://api.airtable.com/v0/app6wQWfM6eJngkD4/buscas?filterByFormula=({Squad} = '09-22')", 
+   
+    fetch("https://api.airtable.com/v0/app6wQWfM6eJngkD4/buscas?maxRecords=10&filterByFormula=({Squad} = '09-22')",
+    // fetch( "https://api.airtable.com/v0/app6wQWfM6eJngkD4/Buscas?maxRecords=10&view=Grid%20view",
 		  {
+        method:"GET",
         headers: 
 				{
-          Authorization: "Bearer keymkBEBt2FCf4w3w"
+          "Authorization": 'Bearer keykXHtsEPprqdSBF'
         }
       }
 		)
@@ -93,6 +96,9 @@ function Search() {
                       <li className='SearchhourColumns'>{formatTime(user.fields.Data)}</li>
                     </ul>
                    ))}
+
+
+
                 </div>
 							</div>
            </div>
