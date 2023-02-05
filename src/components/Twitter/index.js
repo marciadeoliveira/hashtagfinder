@@ -18,7 +18,7 @@ function Twitter(props){
           <div className="twitterInformations">
             <div className="informationsUser">{item.userName}: @{item.user}</div>
             {
-              props.userText.map((item, index)=><div className="informationsText">{item.text}</div>)
+              props.userText.map((item, index)=><div className="informationsText" key={index}>{item.text}</div>)
             }
             <div className="informationsBoxLink">
               <a href={item.twitter}

@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import IconLogin from '../../assets/icon-user-alt.svg'
 import IconInfo from '../../assets/icon-info-circle.svg';
 import Header from "../../components/Header";
@@ -34,6 +34,15 @@ function Home() {
   let users = []
   let texts=[]
   
+  useEffect(() => {
+    if (searchValue) {
+      getTwitter();
+      return () => {
+        setSearchValue("");
+      };
+    }
+  });
+
   function getTwitter(){
     //Se tiver valor no input, fazer o fetch na apiTwitter
     if(searchValue !== ''){
@@ -78,7 +87,7 @@ function Home() {
       })
     }
   }
-  getTwitter()
+  
   
   return (
     <div className="containerHome">
