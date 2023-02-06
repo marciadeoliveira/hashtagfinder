@@ -29,10 +29,8 @@ function Home() {
   ]
   const [cardsTwitter, setCardsTwitter] =useState([])
   const [userTwitter, setUserTwitter]=useState([])
-  const [userText, setUserText] =useState([])
-  let images=[]
-  let users = []
-  let texts=[]
+  let images;
+  let users;
   
   useEffect(() => {
     if (searchValue) {
@@ -56,39 +54,39 @@ function Home() {
       )
       .then(function(res){ return res.json()})
       .then(function(result){
-        const dataBase= [result]
-
-        dataBase.map(item=>{
-          const dataText = item.data
-          const dataMedia = item.includes.media
-          const dataIncludes =item.includes.users
-          dataText.map(item=>
-            texts.push({text:item.text})
+        images = result.data.map((item) => {
+          const user = result.includes.users.find(
+            (user) => item.author_id === user.id
           )
-          dataMedia.map(item=>
-            images.push({icon:item.url})
+          const img = result.includes.media.find(
+            (img) => item.attachments.media_keys[0] === img.media_key
           )
-          dataIncludes.map(item=>
-            users.push(
-              {
-                profile :item.profile_image_url,
-                user: item.name,
-                userName: item.username,
-                twitter: item.url,
-                id: item.id,
-              }
-            )
-          )   
-        setUserTwitter(users)
-        setCardsTwitter(images)
-        setUserText(texts)
-        return dataBase;
+          return {
+            id: item.id,
+            icon: img.url,
+            username: user.username,
+            user: user.name,
+            twitter: item.url,
+          };
         })
+        users = result.data.map((item) => {
+          const user = result.includes.users.find(
+            (user) => item.author_id === user.id
+          )
+          return {
+            id: item.id,
+            text: item.text,
+            userName: user.username,
+            user: user.name,
+            profile: user.profile_image_url,
+            twitter: user.url,
+          };
+        })
+        setCardsTwitter(images);
+        setUserTwitter(users);
       })
     }
   }
-  
-  
   return (
     <div className="containerHome">
       <Header buttons={buttonStyles} />
@@ -115,7 +113,7 @@ function Home() {
         </div>:''
       }
       <div>
-        <Twitter cardsTwitter={cardsTwitter} userTwitter={userTwitter} userText={userText}/>
+        <Twitter cardsTwitter={cardsTwitter} userTwitter={userTwitter}/>
       </div>
       <Footer />
     </div>

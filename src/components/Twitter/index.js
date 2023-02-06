@@ -16,16 +16,16 @@ function Twitter(props){
             <img src= {item.profile} alt= "foto do perfil" className="twitterPicture"/>
           </div>
           <div className="twitterInformations">
-            <div className="informationsUser">{item.userName}: @{item.user}</div>
-            {
-              props.userText.map((item, index)=><div className="informationsText" key={index}>{item.text}</div>)
-            }
+            <div className="informationsUser"><strong>{item.user}:</strong> @{item.userName}</div>
+            <div className="informationsText">{item.text}</div>
             <div className="informationsBoxLink">
               <a href={item.twitter}
                  className="informationsLink" 
                  target="_blank" 
                  rel="noopener noreferrer">
-                  <strong>Link ver mais no Twitter</strong>
+                  <strong>
+                    Link ver mais no Twitter
+                  </strong>
               </a>
             </div>
           </div>
