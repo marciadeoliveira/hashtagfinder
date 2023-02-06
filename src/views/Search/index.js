@@ -26,11 +26,15 @@ function Search() {
     },
   ]
   useEffect(() => {
-    fetch("https://api.airtable.com/v0/app6wQWfM6eJngkD4/buscas?filterByFormula=({Squad} = '09-22')", 
+   
+    fetch("https://api.airtable.com/v0/app6wQWfM6eJngkD4/buscas?maxRecords=10&filterByFormula=({Squad} = '09-22')",
+    // fetch( "https://api.airtable.com/v0/app6wQWfM6eJngkD4/Buscas?maxRecords=10&view=Grid%20view",
 		  {
+        
+        method:"GET",
         headers: 
 				{
-          Authorization: "Bearer keymkBEBt2FCf4w3w"
+          "Authorization": 'Bearer keykXHtsEPprqdSBF'
         }
       }
 		)
@@ -40,9 +44,9 @@ function Search() {
   }, [currentPage]);
 
   useEffect(() => {
-    const intersectionObserver = new IntersectionObserver((entradas) => {
+    const intersectionObserver = new IntersectionObserver((Appetizer) => {
     // se o elemento que estiver observando estiver visivel irá executar o código para trazer a próxima página de conteúdo
-    if(entradas.some((entrada) => entrada.isIntersecting)) {
+    if(Appetizer.some((entrada) => entrada.isIntersecting)) {
       setTimeout(
         () =>
           setCurrentPage(
@@ -52,51 +56,54 @@ function Search() {
     }
   });
  //esse metodo observa algum elemento da página
-    intersectionObserver.observe(document.querySelector("#sentinela"));
+    intersectionObserver.observe(document.querySelector("#sentinel"));
     return () => intersectionObserver.disconnect();
     }, []);
 
     //FORMATAR A DATA
-    function formataData(data) {
-        let novaData = new Intl.DateTimeFormat("pt-br", {
+    function formatDate(date) {
+        let newDate = new Intl.DateTimeFormat("pt-br", {
             day: "2-digit",
             month: "2-digit",
-        }).format(data);
-        return novaData;
+        }).format(date);
+        return newDate;
     }
     //FORMATAR HORA
-    function formataHora(hora) {
-        let novaHora = new Intl.DateTimeFormat("pt-br", {
+    function formatTime(time) {
+        let  newhour = new Intl.DateTimeFormat("pt-br", {
             hour: "numeric",
             minute: "numeric",
-        }).format(hora);
-        return novaHora;
+        }).format(time);
+        return newhour;
     }
     return (
-			<header className='pageSearch'>
-        <div className='ListMain ,mobile'>
+			<header className='Searchpage'>
+        <div className='SearchListMain'>
           <Header buttons={buttonStyles} />
-          <div className='ListTitle'>Buscas Realizadas</div>
-          <div className='ListTable'>
-            <div id='ListContainer'>
-              <div className='HeaderTable'>
-                <p className='hashTagColumn'>HashTag</p>
-                <p className='dateColumn'>Data</p>
-                <p className='hourColumn'>Hora</p>
+          <div className='SearchListTitle'>Buscas Realizadas</div>
+          <div className='SearchListTable'>
+            <div id='SearchListContainer'>
+              <div className='SearchHeaderTable'>
+                <p className='SearchhashTagColumn'>HashTag</p>
+                <p className='SearchdateColumn'>Data</p>
+                <p className='SearchhourColumn'>Hora</p>
               </div>
-              <div className='scrollTabela'>
-                <div id='ListHastags'>
+              <div className='SearchscrollTable'>
+                <div id='SearchListHastags'>
                   {lista.map((user, i) => (
-                    <ul className='ListHastags' key={i}>
-                      <li className='ListMarcadores'>{user.fields.Hashtag}</li>
-                      <li className='dateColumns'>{formataData(user.fields.Data)}</li>
-                      <li className='hourColumns'>{formataHora(user.fields.Data)}</li>
+                    <ul className='SearchListHastags' key={i}>
+                      <li className='SearchListMarcadores'>{user.fields.Hashtag}</li>
+                      <li className='SearchdateColumns'>{formatDate(user.fields.Data)}</li>
+                      <li className='SearchhourColumns'>{formatTime(user.fields.Data)}</li>
                     </ul>
                    ))}
+
+
+
                 </div>
 							</div>
            </div>
-          <div id='sentinela'></div>
+          <div id='sentinel'></div>
           </div>
         </div>
         <Footer />
