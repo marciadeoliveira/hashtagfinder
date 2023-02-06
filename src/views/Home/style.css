@@ -30,3 +30,74 @@
     padding-bottom: 5%;
     font-size: 25px
   }
+@media screen and (max-width:1500px){
+  .home{
+    height: 595px;
+  }
+  .containerHome{
+    max-width: 1500px;
+    display: flex;
+    flex-direction: column;
+  }
+  .homeTitle{
+    margin-top: 10%;
+    font-size: 28px;
+    margin-left: 11%;
+  }
+  .homeSubtitle{
+    font-size: 18px;
+    margin-left: 11%;
+    margin-top: 2%;
+  }
+ 
+}
+@media screen and (max-width:1112px){
+  .homeTitle{
+    margin-top: 10%;
+    font-size: 25px;
+    margin-left: 15%;
+  }
+  .homeSubtitle{
+    font-size: 18px;
+    margin-left: 15%;
+    margin-top: 2%;
+  }
+}
+@media screen and (max-width:768px){
+  .home{
+    background-image: url('../../assets/mobile-hero-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .homeTitle{
+    margin-top: 10%;
+    font-size: 20px;
+    margin-left: 16%;
+  }
+  .homeSubtitle{
+    font-size: 16px;
+    margin-left: 16%;
+    margin-top: 2%;
+  }
+  
+}
+@media screen and (max-width:562px){
+ 
+  .containerHome{
+    max-width: 560px;
+  }
+  .homeTitle{
+    margin-top: 10%;
+    font-size: 15px; 
+  }
+  .homeSubtitle{
+    font-size: 14px;
+    margin-top: 2%;
+  }
+}
+@media screen and (max-width:412px){
+  
+  .containerHome{
+    max-width: 412px;
+  }
+}
