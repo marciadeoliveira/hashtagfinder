@@ -5,7 +5,6 @@ import About from '../../views/About'
 import Login from '../../views/Login';
 import Search from '../../views/Search';
 
-
 function App() {
   return (
     <div className="App">

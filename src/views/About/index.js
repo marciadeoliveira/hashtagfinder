@@ -35,7 +35,7 @@ function About(){
       {
         method: "GET",
         headers: {
-        Authorization:'Bearer keymkBEBt2FCf4w3w',
+        Authorization:'Bearer keykXHtsEPprqdSBF',
         },
       }
     )
@@ -50,7 +50,7 @@ function About(){
       { 
         method: "GET", 
         headers: { 
-          "Authorization": `Bearer keymkBEBt2FCf4w3w`, 
+          "Authorization": `Bearer keykXHtsEPprqdSBF`, 
         } 
       })
       .then(function (res) { return res.json(); })
