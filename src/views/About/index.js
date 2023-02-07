@@ -2,17 +2,19 @@ import React, {useEffect,useState} from "react";
 import './style.css';
 import Header from "../../components/Header";
 import PhotoAndIconAboutUs from "../../components/PhotoAndIconAboutUs";
+import Loading from "../../components/Loading";
+import Footer from "../../components/Footer";
 import IconIlustration from '../../assets/about-ilustration.svg';
 import IconGithub from '../../assets/icon-github.svg';
 import IconEnvelope from '../../assets/icon-envelope.svg';
 import IconLinkedin from '../../assets/icon-awesome-linkedin.svg';
 import IconHome from '../../assets/icon-home.svg';
 import IconLogin from '../../assets/icon-user-alt.svg';
-import Footer from "../../components/Footer";
 
 function About(){
   const [aboutProject, setAboutProject] = useState();
   const [aboutUs, setAboutUs] = useState([]);
+  const [removeLoadng, setRemoveLoading] = useState(false)
   const buttonStyles =[
     {
       title: "HOME",
@@ -31,6 +33,7 @@ function About(){
   ]
   let aboutUsApi = []
   useEffect(() => {
+    setTimeout(()=>{
     fetch('https://api.airtable.com/v0/app6wQWfM6eJngkD4/Projeto?filterByFormula=Find(%220922%22%2C+Squad)',
       {
         method: "GET",
@@ -43,6 +46,7 @@ function About(){
     .then(function (data) { 
       const aboutProject = data.records[0]
       setAboutProject(aboutProject.fields.Sobre)
+      setRemoveLoading(true)
     })
     .catch((erro) => console.log(erro));
 
@@ -74,6 +78,7 @@ function About(){
         })   
       })
       .catch((erro) => console.log(erro));
+    },1500)
     },[])
 
   return(
@@ -85,6 +90,9 @@ function About(){
             <h1>Sobre o projeto</h1>
           </div>
           <div className="projectText">
+            <div className="textLoader">
+              {!removeLoadng && <Loading/>}
+            </div>
             <p>{aboutProject}</p>
           </div>
         </div>
@@ -97,6 +105,9 @@ function About(){
           <h1>Quem somos</h1>
         </div>
         <div className="aboutUsBox">
+          <div className="aboutLoader">
+            {!removeLoadng && <Loading/>}
+          </div>
           <PhotoAndIconAboutUs aboutUs={aboutUs}/>
         </div>
       </div>

@@ -1,4 +1,3 @@
-
 import "./style.css";
 
 function CardsTwitter(props){
