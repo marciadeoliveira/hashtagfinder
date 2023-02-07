@@ -28,6 +28,12 @@
   font-size: 1.8rem;
   line-height: 3rem;
 }
+.textLoader, .aboutLoader{ 
+  display: flex;
+  height: 40px;
+  width: 40px;
+  margin: auto;
+}
 .aboutIlustration{
   width: 40%;
   display: flex;
