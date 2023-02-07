@@ -7,7 +7,6 @@ function Twitter(props){
   return (
     <div className="containerTwuiter">
       <div className="containerCard">
-      <div className="titletwitter"><h3>Twitter</h3></div>
         <CardsTwitter cardsTwitter={props.cardsTwitter}/>
       </div>
       <div className="containerInformation">

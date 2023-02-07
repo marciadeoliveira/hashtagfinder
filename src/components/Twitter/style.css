@@ -5,7 +5,7 @@
   background-color:  #0A1744;
   background-size: cover;
   background-repeat: no-repeat;
-  padding-top: 5%;
+
 }
 .containerCard{
   width: 400px;
@@ -58,7 +58,7 @@
 .informationsText{
   margin-top: 3%;
   white-space: nowrap; 
-  word-break: break-all;
+  /* word-break: break-all; */
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -85,6 +85,11 @@
   }
 }
 @media screen and (max-width:1112px){
+  .containerCardsTwitter{
+    width: 100%;
+   
+    padding-left: 10%;
+  }
   .containerInformation{
     display: flex;
     flex-direction: column;
@@ -98,17 +103,17 @@
   .containerInformation{
     max-width: 768px;
   }
+  .twitterUser{
+    margin-right: 30%;
+  }
   .containerCard{
     display: list-item;
      margin-right: 2%;
    }
   .containerCardsTwitter{
     width: 100%;
-    justify-content: center;
-    background-color:  #0A1744;
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding-top: 5%;
+   
+    padding-left: 3%;
   }
 }
 @media screen and (max-width:562px){
@@ -123,15 +128,15 @@
      margin-right: 2%;
     }
     .containerTwuiter{
-      display: inline-block;
-    }
+       display: inline-block; 
+    } 
     .containerCardsTwitter{
       width: 100%;
       justify-content: center;
       background-color:  #0A1744;
       background-size: cover;
       background-repeat: no-repeat;
-      padding-top: 5%;
+    
     }
 
 }
