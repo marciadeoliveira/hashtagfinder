@@ -31,7 +31,7 @@ function About(){
   ]
   let aboutUsApi = []
   useEffect(() => {
-    fetch('https://api.airtable.com/v0/app6wQWfM6eJngkD4/Projeto?filterByFormula=Find(%2209-22%22%2C+Squad)',
+    fetch('https://api.airtable.com/v0/app6wQWfM6eJngkD4/Projeto?filterByFormula=Find(%220922%22%2C+Squad)',
       {
         method: "GET",
         headers: {
@@ -46,7 +46,7 @@ function About(){
     })
     .catch((erro) => console.log(erro));
 
-    fetch('https://api.airtable.com/v0/app6wQWfM6eJngkD4/Equipe?filterByFormula=Find(%2209-22%22%2C+Squad)', 
+    fetch('https://api.airtable.com/v0/app6wQWfM6eJngkD4/Equipe?filterByFormula=Find(%220922%22%2C+Squad)', 
       { 
         method: "GET", 
         headers: { 
