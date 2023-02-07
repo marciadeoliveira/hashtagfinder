@@ -15,7 +15,7 @@ function Login() {
   const handleSubmit = (e) => {
     e.preventDefault();
     fetch(
-      'https://api.airtable.com/v0/app6wQWfM6eJngkD4/Login?filterByFormula=Find(%2209-22%22%2C+Squad)',
+      'https://api.airtable.com/v0/app6wQWfM6eJngkD4/Login?filterByFormula=Find(%220922%22%2C+Squad)',
       {
         method: "GET",
         headers: {

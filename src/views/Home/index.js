@@ -7,7 +7,6 @@ import Twitter from '../../components/Twitter'
 import Footer from "../../components/Footer";
 import "./style.css";
 
-
 function Home() {
   const [searchValue,setSearchValue]= useState('');
   const [msgErr,setMsgErr] = useState('')
