@@ -5,6 +5,7 @@
   background-color:  #0A1744;
   background-size: cover;
   background-repeat: no-repeat;
+  padding-top: 5%;
 }
 .containerCard{
   width: 400px;
@@ -12,11 +13,15 @@
   display: flex;
   margin-right: 2%;
 }
+.titletwitter{
+  display: none;
+}
 .containerInformation{
   width: 550px;
   display: flex;
   flex-direction: column;
   margin-left: 2%;
+ 
 }
 .twitterUser{
   display: flex;
@@ -65,8 +70,75 @@
   color:#72EFDB;
   text-decoration: none;
 }
-@media screen and (max-width:1500px){}
-@media screen and (max-width:1112px){}
-@media screen and (max-width:768px){}
-@media screen and (max-width:562px){}
-@media screen and (max-width:412px){}
+@media screen and (max-width:1500px){
+  .containerInformation{
+    max-width: 1500px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 4%;
+   
+  }
+  .containerCard{
+    max-width: 1500px;
+    display: flex;
+    margin-right: 2%;
+  }
+}
+@media screen and (max-width:1112px){
+  .containerInformation{
+    display: flex;
+    flex-direction: column;
+  }
+  .containerCard{
+    display: flex;
+    margin-right: 2%;
+  }
+}
+@media screen and (max-width:768px){
+  .containerInformation{
+    max-width: 768px;
+  }
+  .containerCard{
+    display: list-item;
+     margin-right: 2%;
+   }
+  .containerCardsTwitter{
+    width: 100%;
+    justify-content: center;
+    background-color:  #0A1744;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 5%;
+  }
+}
+@media screen and (max-width:562px){
+  .containerInformation{
+    max-width: 562px;
+  }
+  .containerTwuiter{
+    max-width: 562px;
+  }
+    .containerCard{
+     display: list-item;
+     margin-right: 2%;
+    }
+    .containerTwuiter{
+      display: inline-block;
+    }
+    .containerCardsTwitter{
+      width: 100%;
+      justify-content: center;
+      background-color:  #0A1744;
+      background-size: cover;
+      background-repeat: no-repeat;
+      padding-top: 5%;
+    }
+
+}
+@media screen and (max-width:412px){
+  .containerInformation{
+    max-width: 412px;
+   
+  }
+  
+}

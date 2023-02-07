@@ -7,9 +7,11 @@ function Twitter(props){
   return (
     <div className="containerTwuiter">
       <div className="containerCard">
+      <div className="titletwitter"><h3>Twitter</h3></div>
         <CardsTwitter cardsTwitter={props.cardsTwitter}/>
       </div>
       <div className="containerInformation">
+        
         {
           props.userTwitter.map((item,index) => <div className="twitterUser" key={index}>
           <div className="twitterProfile">
@@ -19,7 +21,7 @@ function Twitter(props){
             <div className="informationsUser"><strong>{item.user}:</strong> @{item.userName}</div>
             <div className="informationsText">{item.text}</div>
             <div className="informationsBoxLink">
-              <a href={item.twitter}
+              <a href={item.twitter}           
                  className="informationsLink" 
                  target="_blank" 
                  rel="noopener noreferrer">

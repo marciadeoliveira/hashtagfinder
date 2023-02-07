@@ -10,6 +10,9 @@
   display:"inline-block";
   position: relative;
 }
+titleCardImage{
+  display: none;
+}
 .cardsIlustration{
   display: 'flex';
   flex-direction:'column';
