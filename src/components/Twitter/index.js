@@ -4,12 +4,11 @@ import CardsTwitter from "../CardsTwitter";
 
 function Twitter(props){
   return (
-    <div className="containerTwuiter">
+    <div className="containerTwiter">
       <div className="containerCard">
         <CardsTwitter cardsTwitter={props.cardsTwitter}/>
       </div>
       <div className="containerInformation">
-        
         {
           props.userTwitter.map((item,index) => <div className="twitterUser" key={index}>
           <div className="twitterProfile">
