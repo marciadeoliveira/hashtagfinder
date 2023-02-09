@@ -2,8 +2,12 @@ import "./style.css";
 import React from 'react';
 import CardsTwitter from "../CardsTwitter";
 
+<<<<<<< HEAD
 
 function Twitter(props) {
+=======
+function Twitter(props){
+>>>>>>> bb7d6c2326a2aeb8eea567a39239fbe45396a2d3
   return (
     <div className="containerTwuiter">
       {/* <button class="btnTwitter">
@@ -42,5 +46,4 @@ function Twitter(props) {
     </div>
   );
 };
-
 export default Twitter;
