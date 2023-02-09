@@ -34,29 +34,30 @@ function About(){
   let aboutUsApi = []
   useEffect(() => {
     setTimeout(()=>{
-    fetch('https://api.airtable.com/v0/app6wQWfM6eJngkD4/Projeto?filterByFormula=Find(%220922%22%2C+Squad)',
-      {
-        method: "GET",
-        headers: {
-        Authorization:'Bearer keykXHtsEPprqdSBF',
-        },
-      }
-    )
-    .then(function (res) { return res.json(); })
-    .then(function (data) { 
-      const aboutProject = data.records[0]
-      setAboutProject(aboutProject.fields.Sobre)
-      setRemoveLoading(true)
-    })
-    .catch((erro) => console.log(erro));
-
-    fetch('https://api.airtable.com/v0/app6wQWfM6eJngkD4/Equipe?filterByFormula=Find(%220922%22%2C+Squad)', 
-      { 
-        method: "GET", 
-        headers: { 
-          "Authorization": `Bearer keykXHtsEPprqdSBF`, 
-        } 
+      fetch('https://api.airtable.com/v0/app6wQWfM6eJngkD4/Projeto?filterByFormula=Find(%220922%22%2C+Squad)',
+        {
+          method: "GET",
+          headers: {
+          Authorization:'Bearer keykXHtsEPprqdSBF',
+          },
+        }
+      )
+      .then(function (res) { return res.json(); })
+      .then(function (data) { 
+        const aboutProject = data.records[0]
+        setAboutProject(aboutProject.fields.Sobre)
+        setRemoveLoading(true)
       })
+      .catch((erro) => console.log(erro));
+
+      fetch('https://api.airtable.com/v0/app6wQWfM6eJngkD4/Equipe?filterByFormula=Find(%220922%22%2C+Squad)', 
+        { 
+          method: "GET", 
+          headers: { 
+            "Authorization": `Bearer keykXHtsEPprqdSBF`, 
+          } 
+        }
+      )
       .then(function (res) { return res.json(); })
       .then(function (data) { 
         const aboutus = [data.records]
@@ -78,10 +79,9 @@ function About(){
         })   
       })
       .catch((erro) => console.log(erro));
-    },1500)
-    },[])
-
-  return(
+    },1000)
+  })
+   return(
     <div className="containerAbout">
       <Header buttons={buttonStyles}/> 
       <div className="about">
