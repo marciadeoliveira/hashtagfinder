@@ -89,7 +89,7 @@ function Home() {
   return (
     <div className="containerHome">
       <Header buttons={buttonStyles} />
-      <div className="home">
+      <div className="homeInformations">
         <div className="homeTitle">
           <h1>Encontre hashtags</h1>
           <h1>de maneira fácil.</h1>
