@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
   }
-  .home{
+  .homeInformations{
     background-image: url('../../assets/hero-bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -31,7 +31,7 @@
     font-size: 25px
   }
 @media screen and (max-width:1500px){
-  .home{
+  .homeInformations{
     height: 595px;
   }
   .containerHome{
@@ -64,7 +64,7 @@
   }
 }
 @media screen and (max-width:768px){
-  .home{
+  .homeInformations{
     background-image: url('../../assets/mobile-hero-bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
