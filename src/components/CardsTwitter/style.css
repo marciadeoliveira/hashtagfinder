@@ -10,7 +10,7 @@
   display:"inline-block";
   position: relative;
 }
-titleCardImage{
+.titleCardImage{
   display: none;
 }
 .cardsIlustration{
