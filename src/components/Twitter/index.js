@@ -2,22 +2,14 @@ import "./style.css";
 import React from 'react';
 import CardsTwitter from "../CardsTwitter";
 
-<<<<<<< HEAD
 
-function Twitter(props) {
-=======
 function Twitter(props){
->>>>>>> bb7d6c2326a2aeb8eea567a39239fbe45396a2d3
+
   return (
     <div className="containerTwuiter">
-      {/* <button class="btnTwitter">
-        Twitter
-      </button> */}
+    
       <div className="containerCard">
         <CardsTwitter cardsTwitter={props.cardsTwitter} />
-        {/* <button class="btnCard">
-          Imagens
-        </button> */}
       </div>
       <div className="containerInformation">
 
