@@ -6,24 +6,32 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
-.containerCard{
-  width: 400px;
-  height: 100%;
+.containerDesktop{
   display: flex;
-  margin-right: 2%;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
-.titletwitter{
+.containerMobile{
   display: none;
 }
+.containerCard{
+  width: 619px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .containerInformation{
-  width: 550px;
+  width: 700px;
   display: flex;
   flex-direction: column;
   margin-left: 2%;
 }
 .twitterUser{
   display: flex;
-  height: 140px;
+  width: 100%;
+  height: 229px;
   margin-bottom: 4%;
   padding: 1%;
   justify-content: left;
@@ -34,114 +42,174 @@
   color: #D9D9D9;
   margin-right: 10%;
 }
+.informationsUser{
+  margin-top: 2%;
+  white-space: nowrap; 
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .twitterProfile{
+  max-width: 80%;
   display: flex;
   padding-bottom: 14%;
   margin-top: 2%;
-  margin-left: 4%;
+  margin-left: 3%;
 }
 .twitterPicture{
-  width: 60px;
+  width: 80%;
   border-radius: 100%;
   display: flex;
 }
 .twitterInformations{
   display: flex;
-  width: 80%;
+  max-width: 80%;
   flex-direction: column;
   justify-content: center;
   margin-left: 2%;
-  margin-top: 3%;
+  margin-top: 1%;
 }
 .informationsText{
-  margin-top: 3%;
+  margin-top: 2%;
   white-space: nowrap; 
-  /* word-break: break-all; */
+  word-break: break-all;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .informationsBoxLink{
   margin-top: 5%;
-  padding-bottom: 3%;
+  padding-bottom: 1%;
 }
 .informationsLink{
   color:#72EFDB;
   text-decoration: none;
 }
 @media screen and (max-width:1500px){
-  .containerInformation{
-    max-width: 1500px;
-    display: flex;
-    flex-direction: column;
-    margin-left: 4%;
-   
-  }
   .containerCard{
-    max-width: 1500px;
+    width: 450px;
+    justify-content: flex-end;
+  }
+  .containerInformation{
+    width: 600px;
     display: flex;
-    margin-right: 2%;
+    margin-left: 1%;
+  }
+  .twitterUser{
+    max-width: 100%;
+    height: 140px;
+  }
+  .twitterProfile{
+    max-width: 100%;
+    padding-bottom: 16%;
+  }
+  .twitterPicture{
+    width: 90%;
+  }
+  .informationsText{
+    font-size: 16px;;
   }
 }
 @media screen and (max-width:1112px){
-  .containerCardsTwitter{
-    width: 100%;
-   
-    padding-left: 10%;
-  }
   .containerInformation{
-    display: flex;
-    flex-direction: column;
+    width: 550px;
   }
   .containerCard{
-    display: flex;
-    margin-right: 2%;
+    width: 400px;
+  }
+  .twitterUser{
+    height: 130px;
+    font-size: 14px;;
+  }
+  .twitterProfile{
+    max-width: 100%;
+  }
+  .informationsText{
+    font-size: 14px;;
   }
 }
 @media screen and (max-width:768px){
-  .containerInformation{
-    max-width: 768px;
+  .containerDesktop{
+    display: none;
   }
-  .twitterUser{
-    margin-right: 30%;
+  .containerMobile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-  .containerCard{
-    display: list-item;
-     margin-right: 2%;
-   }
-  .containerCardsTwitter{
+  .containerButtons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-   
-    padding-left: 3%;
+    height: 100px;
+  }
+  .buttonTweets, .buttonImages{
+    width: 350px;
+    border: none;
+    background: transparent;
+    border-bottom: solid 2px white;
+    cursor: pointer;
+    margin: 6%;
+    color: white;
+    padding: 2%;
+    font-size: 18px;
+  }
+  .buttonTweets:focus{
+    border-bottom: solid 2px#72EFDB;
+    color: #72EFDB;
+  }
+  .buttonImages:focus{
+    border-bottom: solid 2px #72EFDB;
+    color: #72EFDB;
   }
 }
 @media screen and (max-width:562px){
+  .containerCard{
+    justify-content: center;
+    align-items: center;
+  }
   .containerInformation{
-    max-width: 562px;
+    width: 450px;
+    display: flex;
+    margin-left: 0%;
   }
-  .containerTwitter{
-    max-width: 562px;
+  .twitterUser{
+    width: 100%;
+    height: 130px;
+  } 
+  .twitterPicture{
+    margin-top: 10%;
+    width: 90%;
   }
-    .containerCard{
-     display: list-item;
-     margin-right: 2%;
-    }
-    .containerTwitter{
-       display: inline-block; 
-    } 
-    .containerCardsTwitter{
-      width: 100%;
-      justify-content: center;
-      background-color:  #0A1744;
-      background-size: cover;
-      background-repeat: no-repeat;
-    
-    }
-
+  .informationsText{
+    font-size: 15px;;
+  }
 }
 @media screen and (max-width:412px){
   .containerInformation{
-    max-width: 412px;
-   
+    width: 390px;
   }
+  .containerCard{
+    width: 390px;
+  }
+  .buttonTweets, .buttonImages{
+    width: 160px;
+    font-size: 16px;
+  }
+  .twitterUser{
+    width: 380px;
+    height: 128px;
+    margin-bottom: 10%;
+  }
+  .twitterPicture{
+    width: 100%;
+    padding: 2%;
+  }
+  .informationsText{
+    font-size: 14px;;
+  }
+
+
   
 }

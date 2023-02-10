@@ -2,12 +2,12 @@
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 .cardsTwitter{
-  margin-bottom:5%;
-  display:"inline-block";
+  margin-bottom:6%;
+  display:"flex";
   position: relative;
 }
 .titleCardImage{
@@ -16,14 +16,14 @@
 .cardsIlustration{
   display: 'flex';
   flex-direction:'column';
-  width: 170px;
-  height: 180px;
+  width: 287px;
+  height: 287px;
   border-radius:15%;
 }
 .cardsPostedBy {
   width: 90%;
   position: absolute;
-  top: 74%;
+  top: 75%;
   right: 0%;
   font-size: 10px;
   font-weight: bold;
@@ -40,3 +40,56 @@
   color: white;
   text-shadow: "0px 0px 20px black";
 }
+@media screen and (max-width:1500px){
+  .containerCardsTwitter{
+    width: 85%;
+    justify-content: space-between;
+  }
+  .cardsIlustration{
+    width: 180px;
+    height: 180px;
+  }
+}
+@media screen and (max-width:1112px){
+  .cardsIlustration{
+    width: 150px;
+    height: 150px;
+  }
+  .cardsPostedBy {
+    font-size: 8px;
+    font-weight: bold;
+  }
+  .postedbyUserName{
+    font-size: 12px;
+  }
+}
+@media screen and (max-width:768px){
+  .containerCardsTwitter{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+  }
+  .cardsIlustration{
+    width: 150px;
+    height: 150px;
+  }
+  .cardsTwitter{
+    margin:3%;
+  }
+  .cardsPostedBy {
+    font-size: 7px;
+    font-weight: bold;
+  }
+  .postedbyUserName{
+    font-size: 11px;
+  }
+  
+}
+@media screen and (max-width:412px){
+  .cardsIlustration{
+    width: 170px;
+    height: 170px;
+  }
+}
+
+
