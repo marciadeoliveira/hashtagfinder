@@ -14,7 +14,6 @@ function SearchBarHome(props){
       }else{
         props.setSearchValue(tag)
         clearFields()
-        twitter()
       }
     }
   }
@@ -26,7 +25,6 @@ function SearchBarHome(props){
     }else if(tag !== '' ){
       props.setSearchValue(tag)
       clearFields()
-      twitter()
     }
   }
   // Funçaõ que limpa o valor do input e também a mensagem de erro pelo input não ter valor
@@ -35,9 +33,6 @@ function SearchBarHome(props){
     props.setMsgErr('')
   }
 
-  function twitter(){
-    console.log( 'agora vai')
-  } 
   return(
     <div className='searchBar'>
       <div className="searchBarInput"  value={props.searchValue}>
