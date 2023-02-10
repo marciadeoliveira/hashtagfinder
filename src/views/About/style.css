@@ -46,9 +46,9 @@
 .aboutUs{
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin-top: 3%;
+  display: flex;
+  align-items: center;
 }
 .aboutTitle{
   width: 87%;
@@ -60,6 +60,7 @@
 .aboutUsBox{
   display: flex;
   width: 80%;
+  padding-right: 15%;
 }
 @media screen and (max-width:1500px){
   .containerAbout{
@@ -149,10 +150,12 @@
   .aboutUsBox{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-top: 3%;
+    padding-right: 0%;
   }
 }
-
 @media screen and (max-width:562px) {
   .containerAbout{
     max-width: 562px;

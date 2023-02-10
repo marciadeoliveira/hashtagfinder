@@ -1,43 +1,44 @@
 .containerHome{
-    max-width: 1920px;
-    display: flex;
-    flex-direction: column;
-  }
-  .homeInformations{
-    background-image: url('../../assets/hero-bg.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 600px;
-    color: white;
-    padding-bottom: 9%;
-  }
-  .homeTitle{
-    margin-top: 13%;
-    font-size: 28px;
-    margin-left: 5%;
-  }
-  .homeSubtitle{
-    font-size: 20px;
-    margin-left: 5%;
-    margin-top: 2%;
-  }
-  .homeMessage{
-    background-color:  #0e1c52;
-    color: white;
-    width: 100%;
-    text-align: center;
-    padding-top: 3%;
-    padding-bottom: 5%;
-    font-size: 25px
-  }
+  max-width: 1920px;
+  display: flex;
+  flex-direction: column;
+}
+.homeInformations{
+  background-image: url('../../assets/hero-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  padding-bottom: 8%;
+}
+.homeTitle{
+  margin-top: 10%;
+  font-size: 50px;
+  margin-left: 8%;
+}
+.homeSubtitle{
+  font-size: 31px;
+  margin-left: 8%;
+  margin-top: 2%;
+}
+.homeMessage{
+  background-color: black;
+  color: white;
+  width: 100%;
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+}
+.cardsAndTwitter{
+  margin-top: 3%;
+}
 @media screen and (max-width:1500px){
-  .homeInformations{
-    height: 595px;
-  }
   .containerHome{
     max-width: 1500px;
     display: flex;
     flex-direction: column;
+  }
+  .homeInformations{
+    height: 595px;
   }
   .homeTitle{
     margin-top: 10%;
@@ -45,13 +46,15 @@
     margin-left: 11%;
   }
   .homeSubtitle{
-    font-size: 18px;
+    font-size: 20px;
     margin-left: 11%;
     margin-top: 2%;
   }
- 
 }
 @media screen and (max-width:1112px){
+  .containerHome{
+    max-width: 1112px;
+  }
   .homeTitle{
     margin-top: 10%;
     font-size: 25px;
@@ -64,14 +67,9 @@
   }
 }
 @media screen and (max-width:768px){
-  .homeInformations{
-    background-image: url('../../assets/mobile-hero-bg.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
   .homeTitle{
     margin-top: 10%;
-    font-size: 20px;
+    font-size: 25px;
     margin-left: 16%;
   }
   .homeSubtitle{
