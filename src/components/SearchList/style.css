@@ -1,0 +1,64 @@
+.searchListHastags {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    grid-area: 1 / 1 / 5 / 4;
+    font: -webkit-mini-control;
+    color: #ffffff;
+    font: "Montserrat,Regular";
+    border-bottom: 0.1px solid #41558e;
+    margin-left: 23.8px;
+    margin-right: 23.8px;
+    padding: 20px 34.1px;
+  }
+ ul{
+    list-style: none;
+  }
+.searchDateColumns,
+.searchHourColumns {
+  display: grid;
+  justify-items: flex-end;
+  color: #72efdb;
+}
+@media screen and (max-width: 900px) {
+    .searchDateColumns,
+    .searchHourColumns {
+      display: grid;
+      justify-items: flex-end;
+      color: #72efdb;
+    }
+}
+@media screen and (max-width: 840px) {
+  .searchHourColumns {
+      color: #72efdb;
+      padding-left: 25px;
+    }
+  .searchHeaderTable {
+      padding: 0;
+    }
+}
+
+@media screen and (max-width:562px){
+    .searchHashTagColumn {
+       margin-left: 50px;
+      }
+}
+@media screen and (max-width:412px){
+  .searchHourColumns {
+     margin-right: 0px;
+     padding-left: 20px;
+  }
+      
+}
+@media screen and (max-width: 395px) {
+  .searchHashTagColumn {
+      margin-left: 50px;
+    }
+  .searchDateColumns {
+      display: flex;
+      margin-left: 40px;
+      padding-right: 0px;
+    }
+}
