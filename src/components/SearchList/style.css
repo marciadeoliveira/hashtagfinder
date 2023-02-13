@@ -13,6 +13,7 @@
     margin-right: 23.8px;
     padding: 20px 34.1px;
   }
+ 
  ul{
     list-style: none;
   }
@@ -49,16 +50,15 @@
   .searchHourColumns {
      margin-right: 0px;
      padding-left: 20px;
+     margin-left: 60%;
   }
       
 }
 @media screen and (max-width: 395px) {
-  .searchHashTagColumn {
-      margin-left: 50px;
-    }
   .searchDateColumns {
       display: flex;
       margin-left: 40px;
       padding-right: 0px;
     }
+    
 }

@@ -107,6 +107,9 @@
     margin-left: 50px;
     margin-right: 10px;
   }
+  .searchDateColumn{
+    padding-left:calc(30% - 49.1px)
+  }
 }
 /* Para modelos mobile */
 @media screen and (max-width: 395px) {
@@ -125,14 +128,5 @@
     padding-right: 50px;
     margin-left: 60px;
   }
-  .searchHourColumns {
-    display: flex;
-    margin-left: 10px;
-    padding-right: 0px;
-  }
-  .searchDateColumns {
-    display: flex;
-    margin-left: 40px;
-    padding-right: 0px;
-  }
+  
 }
