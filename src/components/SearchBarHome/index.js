@@ -42,7 +42,7 @@ function SearchBarHome(props){
         <input 
           className="searchInput" 
           placeholder="Buscar..." 
-          maxLength={6} 
+          maxLength={12} 
           onChange={handleChange}
           onKeyDown={handleChange}
           id="searchInput"
