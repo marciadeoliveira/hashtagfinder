@@ -82,6 +82,9 @@
   }
 }
 @media screen and (max-width:768px){
+  .containerHome{
+    max-width: 768px;
+  }
   .homeTitle{
     font-size: 22px;
     margin-left: 11%;
