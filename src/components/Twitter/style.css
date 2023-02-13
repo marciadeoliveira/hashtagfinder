@@ -100,7 +100,7 @@
   }
   .twitterProfile{
     max-width: 100%;
-    padding-bottom: 16%;
+    padding-bottom: 14%;
   }
   .twitterPicture{
     width: 90%;
@@ -180,10 +180,23 @@
   } 
   .twitterPicture{
     margin-top: 10%;
-    width: 90%;
+  }
+  .twitterProfile{
+    padding-bottom: 16%;
   }
   .informationsText{
     font-size: 15px;;
+  }
+  .containerButtons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 100px;
+  }
+  .buttonTweets, .buttonImages{
+    width: 220px;
+    font-size: 16px;
   }
 }
 @media screen and (max-width:412px){
@@ -194,7 +207,7 @@
     width: 390px;
   }
   .buttonTweets, .buttonImages{
-    width: 160px;
+    width: 150px;
     font-size: 16px;
   }
   .twitterUser{
@@ -209,7 +222,8 @@
   .informationsText{
     font-size: 14px;;
   }
-
-
+  .containerButtons{
+    width: 90%;
+  }
   
 }

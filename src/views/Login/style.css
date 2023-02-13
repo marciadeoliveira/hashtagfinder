@@ -60,20 +60,24 @@
   outline: 0;
 }
 .containerButton {
-  display: flex;
-  flex-wrap: wrap;
+	display: flex;
   justify-content: center;
+	align-items: center;
+	background-color: red;
 }
 .buttonSend {
+	display: block;
   background: #72EFDB;
   width: 205px;
   height: 56px;
-	margin-top: 18%;
+	margin: auto;
   border-radius: 34px;
   cursor: pointer;
 }
 .Error{
   color: #ff0000 ;
+	text-align: center;
+	font-size: 16px;
 }
 @media screen and (max-width:1500px){
 	.container{
@@ -101,7 +105,7 @@
 		max-width: 1112px;
 	}
 	.wrapLogin{
-	  height: 370px;
+	  height: 400px;
  	}
  .buttonSend {
    width: 150px;
@@ -110,6 +114,9 @@
    border-radius: 34px;
    cursor: pointer;
  }
+ .Error{
+	font-size: 14px;
+}
 }
 @media screen and (max-width:768px) {
   .container{
@@ -117,8 +124,8 @@
 		height: 100vh;
 	}
 	.wrapLogin{
-		width: 35%;
-	  height: 310px;
+		width: 50%;
+	  height: 410px;
 		margin-top: 15%;
  	}
 	.textLogin{
@@ -126,9 +133,12 @@
 		margin-bottom: 12%;
 	}
  .buttonSend {
-   width: 130px;
+   width: 180px;
    height: 40px;
  }
+ .Error{
+	font-size: 10px;
+}
 }
 @media screen and (max-width: 412px) {
 	.container{
@@ -153,4 +163,7 @@
     height: 54px;   
 		margin-top: 25%;
   }
+	.Error{
+		font-size: 12px;
+	}
 }

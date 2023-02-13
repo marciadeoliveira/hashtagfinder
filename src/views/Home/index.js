@@ -43,7 +43,7 @@ function Home() {
     }
   });
 
-  function getTwitter(){
+  async function getTwitter(){
     //Se tiver valor no input, fazer o fetch na apiTwitter
     if(searchValue !== ''){
       setTimeout(()=>{
@@ -57,38 +57,63 @@ function Home() {
         )
         .then(function(res){ return res.json()})
         .then(function(result){
-          images = result.data.map((item) => {
-            const user = result.includes.users.find(
-              (user) => item.author_id === user.id
-            )
-            const img = result.includes.media.find(
-              (img) => item.attachments.media_keys[0] === img.media_key
-            )
-            return {
-              id: item.id,
-              icon: img.url,
-              username: user.username,
-              user: user.name,
-              twitter: item.url,
-            };
-          })
-          users = result.data.map((item) => {
-            const user = result.includes.users.find(
-              (user) => item.author_id === user.id
-            )
-            return {
-              id: item.id,
-              text: item.text,
-              userName: user.username,
-              user: user.name,
-              profile: user.profile_image_url,
-              twitter: user.url,
-            };
-          })
-          setCardsTwitter(images);
-          setUserTwitter(users);
+          if(!result){
+            setMsgErr('Nenhuma hashtag encontrada')
+          }else{
+            images = result.data.map((item) => {
+              const user = result.includes.users.find(
+                (user) => item.author_id === user.id
+              )
+              const img = result.includes.media.find(
+                (img) => item.attachments.media_keys[0] === img.media_key
+              )
+              return {
+                id: item.id,
+                icon: img.url,
+                username: user.username,
+                user: user.name,
+                twitter: item.url,
+              };
+            })
+            users = result.data.map((item) => {
+              const user = result.includes.users.find(
+                (user) => item.author_id === user.id
+              )
+              return {
+                id: item.id,
+                text: item.text,
+                userName: user.username,
+                user: user.name,
+                profile: user.profile_image_url,
+                twitter: user.url,
+              };
+            })
+            setCardsTwitter(images);
+            setUserTwitter(users);
+          }
         })
       },1000)
+      const options ={
+        method: "POST", 
+          headers:{
+            "Authorization": `Bearer keykXHtsEPprqdSBF`, 
+            "Content-Type": 'application/json',
+          },
+          body: JSON.stringify({
+            records: [
+              {
+                fields: {
+                  Squad: "0922",
+                  Hashtag: searchValue,
+                  Data: Date.now(),
+                },
+              }
+            ]
+          })
+      }
+      await fetch('https://api.airtable.com/v0/app6wQWfM6eJngkD4/Buscas',options)
+      .then((response) => response.json())
+      .then((data) => console.log(data));
     }
   }
   return (
