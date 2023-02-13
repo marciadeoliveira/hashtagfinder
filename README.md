@@ -8,31 +8,56 @@ Ao fazer login, você ainda pode conferir as hashtags pesquisadas por você, que
 ### Página Search 
 Para acessar a página Search você precisa estar logado, utilize o usuário e senha abaixo
 #### usuário: contato@newtab.academy   senha: 123
+<br>
+
+<span>Pagina Home desenvolvida por Marcia Oliveira</span>
+![designer](/src/assets/home.jpg) 
+
+<br>
+
+<span>Pagina About desenvolvida por Marcia Oliveira</span>
+![designer](/src/assets/about.jpg )
+
+<br>
+
+<span>Pagina Login desenvolvida por Daniel Nogueira</span>
+![designer](/src/assets/login.jpg)
+
+<br>
+
+<span>Pagina Search desenvolvida por Leide Olinto</span>
+![designer](/src/assets/search.jpg)
+
 
 ### Começando o projeto em React
 Para iniciar o projeto em React você precisa rodar no terminal
 #### `npx create-react-app NOME DO PROJETO`
 
+
 ### Instale o React Router
 Para instalar o React Router, rode o comando abaixo
 #### `npm install react-router-dom@6`
+
 
 ### Equipe(Squad)
 Nossa squad, é composta por très alunos da imersão e para que o projeto fosse concluído, nos dedicamos dias e dias, em chamadas de vídeo, reuniões e muito boa vontade, além da troca de experiência de cada um.
 Recebemos as sprints, cada um ficou responsável por uma task.
 Prazos à serem cumpridos, desafios novos, trabalho em equipe e um projeto concluído com sucesso!
 
+
 <div style="display:flex">
-<a href="https://www.linkedin.com/in/marcia-b-oliveira/" target="_blank"> 
- <img src='https://user-images.githubusercontent.com/66282316/216690445-2bdfd006-bb5d-4525-9772-5396a962bea7.jpeg' 
- style="width:100px">
-</a>
-<a href="https://www.linkedin.com/in/leidy-olinto-356b9391/" target="_blank"> 
- <img src='https://user-images.githubusercontent.com/66282316/216689912-87935f31-a578-4d46-98bb-ec9153f94064.jpeg' style="width:100px;">
-</a>
-<a href="https://www.linkedin.com/in/daniel-nogueira-6ba2711b0/" target="_blank"> 
- <img src='https://user-images.githubusercontent.com/66282316/216689877-f2fdb0c9-49ac-4025-80df-972d2fcc2440.jpeg' style="width:100px;">
-</a>
+  <a href="https://www.linkedin.com/in/marcia-b-oliveira/" target="_blank"> 
+   <img src='https://user-images.githubusercontent.com/66282316/216690445-2bdfd006-bb5d-4525-9772-5396a962bea7.jpeg' 
+   style="width:120px"> 
+  </a>
+  
+  <a href="https://www.linkedin.com/in/leidy-olinto-356b9391/" target="_blank"> 
+   <img src='https://user-images.githubusercontent.com/66282316/216689912-87935f31-a578-4d46-98bb-ec9153f94064.jpeg' style="width:120px;">
+  </a>
+  
+  <a href="https://www.linkedin.com/in/daniel-nogueira-6ba2711b0/" target="_blank"> 
+   <img src='https://user-images.githubusercontent.com/66282316/216689877-f2fdb0c9-49ac-4025-80df-972d2fcc2440.jpeg' style="width:120px;">
+  </a>
 </div>
 
 ### Para visualizar o projeto
