@@ -5,6 +5,10 @@ Hashtagfinder, é uma aplicação em que o usuário pesquisa a hashtag de seu in
 Outro ponto interessante, é que você pode criar a sua própria hasttag em seus posts do twitter e através da aplicação, consegue acompanhar se a mesma está sendo utilizada por outros usuários, ou seja, se há engajamento.
 Ao fazer login, você ainda pode conferir as hashtags pesquisadas por você, que ficarão armazenadas na página Search.
 
+### Página Search 
+Para acessar a página Search você precisa estar logado, utilize o usuário e senha abaixo
+#### usuário: contato@newtab.academy   senha: 123
+
 ### Começando o projeto em React
 Para iniciar o projeto em React você precisa rodar no terminal
 #### `npx create-react-app NOME DO PROJETO`
@@ -30,11 +34,6 @@ Prazos à serem cumpridos, desafios novos, trabalho em equipe e um projeto concl
  <img src='https://user-images.githubusercontent.com/66282316/216689877-f2fdb0c9-49ac-4025-80df-972d2fcc2440.jpeg' style="width:100px;">
 </a>
 </div>
-
-### Página Search 
-Para acessar a página Search você precisa estar logado, utilize o usuário e senha abaixo
-#### usuário: contato@newtab.academy
-#### senha: 123
 
 ### Para visualizar o projeto
 #### <a href="https://hashtagfindersquad0922.netlify.app/" target="_blank">Clique aqui</a>
