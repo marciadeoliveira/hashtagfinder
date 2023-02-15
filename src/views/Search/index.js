@@ -37,7 +37,7 @@ function Search() {
             </div>
             <SearchList />
           </div>
-          <div id='sentinel'></div>
+          <div id='ObservList'></div>
         </div>
       </div>
       <Footer />

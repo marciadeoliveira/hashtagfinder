@@ -145,7 +145,7 @@
     height: 100px;
   }
   .buttonTweets, .buttonImages{
-    width: 350px;
+    width: 295px;
     border: none;
     background: transparent;
     border-bottom: solid 2px white;
@@ -191,8 +191,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80%;
-    height: 100px;
+     height: 100px;
   }
   .buttonTweets, .buttonImages{
     width: 220px;
@@ -222,8 +221,6 @@
   .informationsText{
     font-size: 14px;;
   }
-  .containerButtons{
-    width: 90%;
-  }
+ 
   
 }
