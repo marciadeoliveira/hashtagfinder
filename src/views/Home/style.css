@@ -86,7 +86,7 @@
     max-width: 768px;
   }
   .homeTitle{
-    font-size: 22px;
+    font-size: 20px;
     margin-left: 11%;
   }
   .homeSubtitle{
@@ -103,6 +103,9 @@
     width: 40px;
     height: 40px;
   }
+  .homeInformations{
+    padding-bottom: 9%
+  }
 }
 @media screen and (max-width:562px){
   .containerHome{
@@ -110,7 +113,7 @@
   }
   .homeTitle{
     margin-top: 12%;
-    font-size: 16px; 
+    font-size: 25px; 
   }
   .homeMessage{
     font-size: 16px;
@@ -119,6 +122,9 @@
     width: 30px;
     height: 30px;
   }
+  .homeInformations{
+    padding-bottom: 18%
+  }
 }
 @media screen and (max-width:412px){
   .containerHome{
@@ -126,7 +132,7 @@
   }
   .homeTitle{
     margin-top: 12%;
-    font-size: 20px; 
+    font-size: 25px; 
   }
   .homeSubtitle{
     font-size: 16px; 

@@ -90,7 +90,7 @@
     justify-content: flex-end;
   }
   .containerInformation{
-    width: 600px;
+    width: 571px;
     display: flex;
     margin-left: 1%;
   }
@@ -111,7 +111,7 @@
 }
 @media screen and (max-width:1112px){
   .containerInformation{
-    width: 550px;
+    width: 450px;
   }
   .containerCard{
     width: 400px;
@@ -163,6 +163,11 @@
     border-bottom: solid 2px #72EFDB;
     color: #72EFDB;
   }
+  .containerInformation{
+    width: 410px;
+    display: flex;
+    margin-left: 0px;
+  }
 }
 @media screen and (max-width:562px){
   .containerCard{
@@ -170,9 +175,9 @@
     align-items: center;
   }
   .containerInformation{
-    width: 450px;
+    width: 400px;
     display: flex;
-    margin-left: 0%;
+    margin-left: 0px;
   }
   .twitterUser{
     width: 100%;
@@ -200,7 +205,7 @@
 }
 @media screen and (max-width:412px){
   .containerInformation{
-    width: 390px;
+    width: 343px;
   }
   .containerCard{
     width: 390px;
@@ -212,7 +217,7 @@
   .twitterUser{
     width: 380px;
     height: 128px;
-    margin-bottom: 10%;
+    /* margin-bottom: 10%; */
   }
   .twitterPicture{
     width: 100%;
