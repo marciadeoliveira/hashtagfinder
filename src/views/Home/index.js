@@ -103,7 +103,7 @@ function Home() {
             records: [
               {
                 fields: {
-                  Squad: "09-22",
+                  Squad: "0922",
                   Hashtag: searchValue,
                   Data: Date.now(),
                 },
